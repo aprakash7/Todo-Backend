@@ -39,3 +39,4 @@ class Todo(db.Model):
     @staticmethod
     def update_complete(task_id):
         pass
+
