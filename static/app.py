@@ -3,9 +3,12 @@ from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost/SampleDb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://fkyyecinyjunlp:12fac2481084321e043ba15dc0fc320eab08c009998f99a6c9572154aa5b5c3a@ec2-52-71-69-66.compute-1.amazonaws.com:5432/d1k240fqos8h3h'
+
+# 'postgresql://postgres:password@localhost/SampleDb'
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+
 
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
